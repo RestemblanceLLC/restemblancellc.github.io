@@ -149,7 +149,7 @@
 														  }).render('#paypal-button-container-P-7SH74969NW7120830NGCRGKA'); // Renders the PayPal button
 														</script>
 														</td>
-														<td style="vertical-align: top;"><h4>$40.00 USD per month or $10 per week</h4></td>
+														<td style="vertical-align: top;"><h5>A initial fee of $25.00 to create or transfer the domain plus 40.00 USD per month or $10 per week</h5></td>
 													</tbody>
 												</tfoot>
 												</table>
@@ -212,7 +212,28 @@
 												<tfoot>
 													<tr>
 														<td colspan="2"></td>
-														<td><h2>$60.00/mo or $15.00/wk</h2></td>
+														<td><div id="paypal-button-container-P-9W109455L9555460KNGCREZY"></div>
+															<script src="https://www.paypal.com/sdk/js?client-id=AZJygaN9U0XhN3t1m6IRWeH8zFW7mUA5QxqpbNlvzExlymR0sQP0W7DG4XyRj9AXVEyPLSRs0e2IehGo&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+															<script>
+															  paypal.Buttons({
+															      style: {
+															          shape: 'rect',
+															          color: 'gold',
+															          layout: 'vertical',
+															          label: 'subscribe'
+															      },
+															      createSubscription: function(data, actions) {
+															        return actions.subscription.create({
+															          /* Creates the subscription */
+															          plan_id: 'P-9W109455L9555460KNGCREZY'
+															        });
+															      },
+															      onApprove: function(data, actions) {
+															        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+															      }
+															  }).render('#paypal-button-container-P-9W109455L9555460KNGCREZY'); // Renders the PayPal button
+															</script></td>
+														<td><h5>A initial fee of $25.00 to create or transfer the domain plus $60.00/mo or $15.00/wk</h5></td>
 													</tr>
 												</tfoot>
 											</table>
