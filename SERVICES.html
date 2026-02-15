@@ -283,8 +283,29 @@
 														</tbody>
 														<tfoot>
 															<tr>
-																<td colspan="2"></td>
-																<td><h2>$65.00/mo or $16.25/wk</h2></td>
+																<td style="vertical-align: top;"><p>Use our trusted subscription plans using your PayPal account, PayPal CREDIT, or debit/credit card.</p></td>
+																<td><div id="paypal-button-container-P-7SH74969NW7120830NGCRGKA"></div>
+																	<script src="https://www.paypal.com/sdk/js?client-id=AQD40ysObukDPZrrnUSxKD_DCbXe4HKV_dmdGUeY7y9kRCaC4DoibuREtzQh4en9N0dKZwaT_4IHCsze&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+																	<script>
+																	  paypal.Buttons({
+																	      style: {
+																	          shape: 'rect',
+																	          color: 'gold',
+																	          layout: 'vertical',
+																	          label: 'subscribe'
+																	      },
+																	      createSubscription: function(data, actions) {
+																	        return actions.subscription.create({
+																	          /* Creates the subscription */
+																	          plan_id: 'P-7SH74969NW7120830NGCRGKA'
+																	        });
+																	      },
+																	      onApprove: function(data, actions) {
+																	        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+																	      }
+																	  }).render('#paypal-button-container-P-7SH74969NW7120830NGCRGKA'); // Renders the PayPal button
+																	</script></td>
+																<td style="vertical-align: top;"><h2>$65.00 per month or $16.25 per week. One-time setup fee: $25.00 per month USD.</h2></td>
 															</tr>
 													</tbody>
 													</tfoot>
