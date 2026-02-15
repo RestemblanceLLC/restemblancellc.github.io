@@ -5,6 +5,7 @@
 	Forty by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
 */
 
 html, body, div, span, applet, object,
@@ -71,6 +72,10 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+td {
+  vertical-align: top;
+}
+
 
 /* Basic */
 
@@ -537,6 +542,7 @@ input, select, textarea {
 				.row.gtr-200.gtr-uniform > * {
 					padding-top: 4em;
 				}
+
 
 		@media screen and (max-width: 1680px) {
 
