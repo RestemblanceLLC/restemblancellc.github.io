@@ -135,7 +135,7 @@
 														<td style="vertical-align: top;"><p>Use our trusted subscription plans using your PayPal account, PayPal CREDIT, or debit/credit card.</p></td>
 															
 														<td>
-															<div id="paypal-button-container-P-4BC13864ND2702543NGCRD5Q"></div>
+															<div id="paypal-starter" data-plan="P-7SH74969NW7120830NGCRGKA"></div>
 														</td>
 														<td style="vertical-align: top;"><h3>40.00 USD per month or 10 USD per week. One-time set up fee: 25.00 USD.</h3></td>
 													</tr>
@@ -189,7 +189,7 @@
 														<td style="vertical-align: top;"><p>Use our trusted subscription plans using your PayPal account, PayPal CREDIT, or debit/credit card.</p></td>
 														
 														<td>
-															<div id="paypal-button-container-P-9W109455L9555460KNGCREZY"></div>
+															<div id="paypal-growth" data-plan="P-9W109455L9555460KNGCREZY"></div>
 														</td>
 														
 														<td><h3>60.00 USD per month or 15.00 USD per week. One-time setup fee: 25.00 USD.</h3></td>
@@ -242,7 +242,7 @@
 															<td style="vertical-align: top;"><p>Use our trusted subscription plans using your PayPal account, PayPal CREDIT, or debit/credit card.</p></td>
 															
 															<td>
-																<div id="paypal-button-container-P-7SH74969NW7120830NGCRGKA"></div>
+																<div id="paypal-impactequity" data-plan="P-7SH74969NW7120830NGCRGKA"</div>
 															</td>
 															<td style="vertical-align: top;"><h3>65.00 USD per month or 16.25 USD per week. One-time setup fee: 25.00 USD.</h3></td>
 														</tr>
@@ -401,15 +401,15 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 		<!--Load SDK-->
-			<!-- Initialize the JS-SDK-->
+			
 								
 			<script src="https://www.paypal.com/sdk/js?client-id=AZJygaN9U0XhN3t1m6IRWeH8zFW7mUA5QxqpbNlvzExlymR0sQP0W7DG4XyRj9AXVEyPLSRs0e2IehGo&buyer-country=US&currency=USD&components=buttons&enable-funding=venmo,paylater,card"
 				data-sdk-integration-source="developer-studio"
 			></script>
-			<script src="src/app.js"></script>
+			<!--<script src="src/app.js"></script>-->
 		
 
-		<!--Starter Plan-->
+		<!--Starter Plan
 			<script src="https://www.paypal.com/sdk/js?client-id=AcbcWuql-kgLtFIrh8cARj4hBYxFBYdSqq9xdUh0A2hi_KQPalwCAZ9uyM5n9C3sBYoqPz6curz_fh9V&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
 			<script>
 			  paypal.Buttons({
@@ -430,7 +430,7 @@
 				  }
 			  }).render('#paypal-button-container-P-7SH74969NW7120830NGCRGKA'); // Renders the PayPal button
 			</script>
-		<!--Growth Plan-->
+		<!--Growth Plan-
 			<script src="https://www.paypal.com/sdk/js?client-id=AcbcWuql-kgLtFIrh8cARj4hBYxFBYdSqq9xdUh0A2hi_KQPalwCAZ9uyM5n9C3sBYoqPz6curz_fh9V&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
 			<script>
 			  paypal.Buttons({
@@ -451,7 +451,7 @@
 				  }
 			  }).render('#paypal-button-container-P-9W109455L9555460KNGCREZY'); // Renders the PayPal button
 			</script>
-		<!--Impact & Equity Plan-->
+		<!--Impact & Equity Plan
 			<script src="https://www.paypal.com/sdk/js?client-id=AQD40ysObukDPZrrnUSxKD_DCbXe4HKV_dmdGUeY7y9kRCaC4DoibuREtzQh4en9N0dKZwaT_4IHCsze&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
 			<script>
 			  paypal.Buttons({
@@ -473,7 +473,46 @@
 			  }).render('#paypal-button-container-P-7SH74969NW7120830NGCRGKA'); // Renders the PayPal button
 			</script>
 			
-									
+			<!-- PayPal SDK (ONLY once on page) -->
+		<script
+		  src="https://www.paypal.com/sdk/js?client-id=AcbcWuql-kgLtFIrh8cARj4hBYxFBYdSqq9xdUh0A2hi_KQPalwCAZ9uyM5n9C3sBYoqPz6curz_fh9V&vault=true&intent=subscription"
+		  data-sdk-integration-source="button-factory">
+		</script>
+		
+		<!-- Render All PayPal Buttons -->
+		<script>
+		window.addEventListener("load", function () {
+		
+		  const STYLE = {
+		    shape: "rect",
+		    color: "gold",
+		    layout: "vertical",
+		    label: "subscribe"
+		  };
+		
+		  document.querySelectorAll("[data-plan]").forEach(function (el) {
+		
+		    const planId = el.getAttribute("data-plan");
+		
+		    paypal.Buttons({
+		      style: STYLE,
+		      createSubscription: function (data, actions) {
+		        return actions.subscription.create({
+		          plan_id: planId
+		        });
+		      },
+		      onApprove: function (data) {
+		        alert("Subscribed to plan: " + planId +
+		              "\nSubscription ID: " + data.subscriptionID);
+		      }
+		    }).render("#" + el.id);
+		
+		  });
+		
+		});
+		</script>
+
+						
 
 									
 			
