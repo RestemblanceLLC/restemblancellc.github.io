@@ -403,77 +403,10 @@
 		<!--Load SDK-->
 			
 								
-			<script src="https://www.paypal.com/sdk/js?client-id=AZJygaN9U0XhN3t1m6IRWeH8zFW7mUA5QxqpbNlvzExlymR0sQP0W7DG4XyRj9AXVEyPLSRs0e2IehGo&buyer-country=US&currency=USD&components=buttons&enable-funding=venmo,paylater,card"
+			<!--<script src="https://www.paypal.com/sdk/js?client-id=AZJygaN9U0XhN3t1m6IRWeH8zFW7mUA5QxqpbNlvzExlymR0sQP0W7DG4XyRj9AXVEyPLSRs0e2IehGo&buyer-country=US&currency=USD&components=buttons&enable-funding=venmo,paylater,card"
 				data-sdk-integration-source="developer-studio"
-			></script>
-			<!--<script src="src/app.js"></script>-->
-		
-
-		<!--Starter Plan
-			<script src="https://www.paypal.com/sdk/js?client-id=AcbcWuql-kgLtFIrh8cARj4hBYxFBYdSqq9xdUh0A2hi_KQPalwCAZ9uyM5n9C3sBYoqPz6curz_fh9V&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
-			<script>
-			  paypal.Buttons({
-				  style: {
-					  shape: 'rect',
-					  color: 'gold',
-					  layout: 'vertical',
-					  label: 'subscribe'
-				  },
-				  createSubscription: function(data, actions) {
-					return actions.subscription.create({
-					  /* Creates the subscription */
-					  plan_id: 'P-7SH74969NW7120830NGCRGKA'
-					});
-				  },
-				  onApprove: function(data, actions) {
-					alert(data.subscriptionID); // You can add optional success message for the subscriber here
-				  }
-			  }).render('#paypal-button-container-P-7SH74969NW7120830NGCRGKA'); // Renders the PayPal button
-			</script>
-		<!--Growth Plan-
-			<script src="https://www.paypal.com/sdk/js?client-id=AcbcWuql-kgLtFIrh8cARj4hBYxFBYdSqq9xdUh0A2hi_KQPalwCAZ9uyM5n9C3sBYoqPz6curz_fh9V&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
-			<script>
-			  paypal.Buttons({
-				  style: {
-					  shape: 'rect',
-					  color: 'gold',
-					  layout: 'vertical',
-					  label: 'subscribe'
-				  },
-				  createSubscription: function(data, actions) {
-					return actions.subscription.create({
-					  /* Creates the subscription */
-					  plan_id: 'P-9W109455L9555460KNGCREZY'
-					});
-				  },
-				  onApprove: function(data, actions) {
-					alert(data.subscriptionID); // You can add optional success message for the subscriber here
-				  }
-			  }).render('#paypal-button-container-P-9W109455L9555460KNGCREZY'); // Renders the PayPal button
-			</script>
-		<!--Impact & Equity Plan
-			<script src="https://www.paypal.com/sdk/js?client-id=AQD40ysObukDPZrrnUSxKD_DCbXe4HKV_dmdGUeY7y9kRCaC4DoibuREtzQh4en9N0dKZwaT_4IHCsze&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
-			<script>
-			  paypal.Buttons({
-				  style: {
-					  shape: 'rect',
-					  color: 'gold',
-					  layout: 'vertical',
-					  label: 'subscribe'
-				  },
-				  createSubscription: function(data, actions) {
-					return actions.subscription.create({
-					  /* Creates the subscription */
-					  plan_id: 'P-7SH74969NW7120830NGCRGKA'
-					});
-				  },
-				  onApprove: function(data, actions) {
-					alert(data.subscriptionID); // You can add optional success message for the subscriber here
-				  }
-			  }).render('#paypal-button-container-P-7SH74969NW7120830NGCRGKA'); // Renders the PayPal button
-			</script>
+			></script>-->
 			
-			<!-- PayPal SDK (ONLY once on page) -->
 		<script
 		  src="https://www.paypal.com/sdk/js?client-id=AcbcWuql-kgLtFIrh8cARj4hBYxFBYdSqq9xdUh0A2hi_KQPalwCAZ9uyM5n9C3sBYoqPz6curz_fh9V&vault=true&intent=subscription"
 		  data-sdk-integration-source="button-factory">
