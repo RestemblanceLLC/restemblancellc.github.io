@@ -76,6 +76,10 @@ td {
   vertical-align: top;
 }
 
+/*Added indented block*/
+.indent-block {
+    margin-left: 2em;
+}
 
 /* Basic */
 
@@ -3956,3 +3960,4 @@ td {
 			opacity: 1;
 			visibility: visible;
 		}
+
