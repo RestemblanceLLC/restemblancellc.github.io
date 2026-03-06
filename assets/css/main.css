@@ -8,6 +8,8 @@
 
 */
 
+
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -2508,6 +2510,14 @@ td {
 				border-top: 0;
 			}
 
+/* PayPal Hosted Buttons Input Fix */
+#paypal-container-NBDAUPARS6DMG input[type="text"],
+#paypal-container-NBDAUPARS6DMG input {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+    border: 1px solid #cccccc !important;
+}
+
 /* Button */
 
 	input[type="submit"],
@@ -3960,4 +3970,5 @@ td {
 			opacity: 1;
 			visibility: visible;
 		}
+
 
