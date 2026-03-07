@@ -74,6 +74,7 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+
 td {
   vertical-align: top;
 }
@@ -3797,6 +3798,13 @@ td {
 			}
 
 		}
+
+
+/* PP */
+	#paypal-button-container-P-7SH74969NW7120830NGCRGKA {
+	  min-width: 220px;
+	  min-height: 45px;
+	}
 
 /* Menu */
 
