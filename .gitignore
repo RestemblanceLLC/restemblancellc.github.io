@@ -1,0 +1,52 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Node (if you later add tooling)
+node_modules/
+dist/
+build/
+coverage/
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sass cache
+.sass-cache/
+*.css.map
+
+# Python cache (if any scripts are added later)
+__pycache__/
+*.pyc
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.orig
+
+# Netlify / Vercel
+.netlify/
+.vercel/
+
+# OS / misc
+.Trashes
