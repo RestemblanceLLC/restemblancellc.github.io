@@ -8,6 +8,8 @@
 
 */
 
+
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -71,6 +73,15 @@ input, select, textarea {
 	-webkit-appearance: none;
 	-ms-appearance: none;
 	appearance: none;
+}
+
+td {
+  vertical-align: top;
+}
+
+/*Added indented block*/
+.indent-block {
+    margin-left: 2em;
 }
 
 /* Basic */
@@ -538,6 +549,7 @@ input, select, textarea {
 				.row.gtr-200.gtr-uniform > * {
 					padding-top: 4em;
 				}
+
 
 		@media screen and (max-width: 1680px) {
 
@@ -2499,6 +2511,14 @@ input, select, textarea {
 				border-top: 0;
 			}
 
+/* PayPal Hosted Buttons Input Fix */
+#paypal-container-NBDAUPARS6DMG input[type="text"],
+#paypal-container-NBDAUPARS6DMG input {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+    border: 1px solid #cccccc !important;
+}
+
 /* Button */
 
 	input[type="submit"],
@@ -3958,3 +3978,5 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+
+

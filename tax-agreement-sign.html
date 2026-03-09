@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>E-Sign Tax Preparation Agreement | Restemblance, LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #d1d5db;
+      --accent: #111827;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      margin-bottom: 8px;
+    }
+
+    .subtext {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 1rem;
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .agreement-box {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px;
+      max-height: 420px;
+      overflow-y: auto;
+      background: #fafafa;
+      margin-top: 18px;
+    }
+
+    .agreement-box h2 {
+      margin-top: 24px;
+      font-size: 1.15rem;
+    }
+
+    .signature-area {
+      margin-top: 20px;
+    }
+
+    .sig-pad-wrap {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+      padding: 12px;
+    }
+
+    #signature-pad {
+      width: 100%;
+      height: 220px;
+      border: 1px dashed #9ca3af;
+      border-radius: 10px;
+      touch-action: none;
+      background: #fff;
+      display: block;
+    }
+
+    .sig-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+
+    button,
+    .btn {
+      border: none;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-dark {
+      background: #111827;
+      color: #fff;
+    }
+
+    .btn-light {
+      background: #e5e7eb;
+      color: #111827;
+    }
+
+    .check-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-top: 18px;
+    }
+
+    .check-row input[type="checkbox"] {
+      width: auto;
+      margin-top: 5px;
+      transform: scale(1.1);
+    }
+
+    .notice {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-top: 14px;
+    }
+
+    .submit-row {
+      margin-top: 24px;
+    }
+
+    .small {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 700px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wrap {
+        padding: 12px;
+      }
+
+      .card {
+        padding: 18px;
+      }
+
+      #signature-pad {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>E-Sign Tax Preparation Engagement Agreement</h1>
+      <p class="subtext">
+        Restemblance, LLC • Atlanta, Georgia
+      </p>
+
+      <form
+        id="agreementForm"
+        action="https://formsubmit.co/restemblance@icloud.com"
+        method="POST"
+      >
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_subject" value="New Signed Tax Preparation Agreement - Restemblance, LLC">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+        <input type="hidden" name="signature_image" id="signature_image">
+        <input type="hidden" name="agreement_version" value="Restemblance, LLC Tax Preparation Engagement Agreement v1">
+
+        <div class="grid">
+          <div>
+            <label for="client_name">Client Full Name</label>
+            <input type="text" id="client_name" name="client_name" required>
+          </div>
+
+          <div>
+            <label for="sign_date">Date</label>
+            <input type="date" id="sign_date" name="sign_date" required>
+          </div>
+
+          <div class="full">
+            <label for="client_address">Street Address</label>
+            <input type="text" id="client_address" name="client_address" required>
+          </div>
+
+          <div>
+            <label for="client_city_state_zip">City, State, ZIP</label>
+            <input type="text" id="client_city_state_zip" name="client_city_state_zip" required>
+          </div>
+
+          <div>
+            <label for="client_email">Email Address</label>
+            <input type="email" id="client_email" name="client_email" required>
+          </div>
+
+          <div>
+            <label for="client_phone">Phone Number</label>
+            <input type="tel" id="client_phone" name="client_phone">
+          </div>
+
+          <div>
+            <label for="tax_year">Tax Year</label>
+            <input type="text" id="tax_year" name="tax_year" placeholder="2025" required>
+          </div>
+
+          <div class="full">
+            <label for="fee_notes">Preparation Fee / Notes</label>
+            <input type="text" id="fee_notes" name="fee_notes" placeholder="$50 non-refundable service fee + flat prep fee">
+          </div>
+        </div>
+
+        <div class="agreement-box">
+          <h2>Tax Preparation Engagement Agreement</h2>
+          <p><strong>Compliant with IRS Circular 230 (31 C.F.R. Part 10)</strong></p>
+
+          <p>
+            This Tax Preparation Engagement Agreement (“Agreement”) is entered into by and between
+            <strong>Restemblance, LLC, Atlanta, Georgia</strong> (“Preparer”) and the undersigned client (“Client”).
+          </p>
+
+          <h2>1. Scope of Engagement</h2>
+          <p>
+            Restemblance, LLC agrees to prepare the Client’s federal income tax return and applicable
+            state income tax return(s) for the identified tax year.
+          </p>
+          <p>Services may include:</p>
+          <ul>
+            <li>Preparation of Form 1040 and related schedules</li>
+            <li>Preparation of applicable state income tax return(s)</li>
+            <li>Electronic filing upon client authorization</li>
+          </ul>
+          <p>This engagement does not include audit representation, bookkeeping, legal advice, tax planning, or amended returns unless separately agreed in writing.</p>
+
+          <h2>2. Compliance with IRS Circular 230</h2>
+          <p>
+            Restemblance, LLC follows regulations governing practice before the Internal Revenue Service.
+            No contingent fee is charged for the preparation of an original tax return. Fees are not based on refund amount.
+          </p>
+
+          <h2>3. Fees and Payment Terms</h2>
+          <p>
+            Client agrees to pay a <strong>non-refundable $50 service fee</strong> and any additional flat preparation fee communicated before filing.
+            Payment is due before electronic filing unless otherwise agreed in writing.
+          </p>
+
+          <h2>4. Client Responsibilities</h2>
+          <ul>
+            <li>Provide accurate, complete, and timely tax information</li>
+            <li>Submit all required tax documents</li>
+            <li>Review the completed return before signing and filing</li>
+            <li>Maintain records supporting income, deductions, and credits</li>
+          </ul>
+          <p>The Client remains responsible for the accuracy of the information provided.</p>
+
+          <h2>5. Refund Processing</h2>
+          <p>
+            Restemblance, LLC does not control IRS or state processing times, refund issuance, direct deposit timing,
+            or offsets for prior debts. No guarantee is made regarding refund amount or processing speed.
+          </p>
+
+          <h2>6. Errors and Corrections</h2>
+          <p>
+            If an error occurs solely due to preparer negligence, Restemblance, LLC will correct the return at no additional preparation charge.
+            Restemblance, LLC is not responsible for penalties or interest resulting from inaccurate or incomplete information supplied by the Client.
+          </p>
+
+          <h2>7. Confidentiality</h2>
+          <p>
+            Client information will be handled in accordance with applicable federal law, including Internal Revenue Code §7216,
+            the Gramm-Leach-Bliley Act, and applicable privacy laws.
+          </p>
+
+          <h2>8. Limitation of Liability</h2>
+          <p>
+            Any liability arising from services under this Agreement shall not exceed the amount of fees paid to Restemblance, LLC.
+          </p>
+
+          <h2>9. Governing Law</h2>
+          <p>This Agreement shall be governed by the laws of the State of Georgia.</p>
+
+          <h2>10. Electronic Signature Consent</h2>
+          <p>
+            By signing electronically below, Client agrees that the electronic signature is intended to authenticate this Agreement
+            and has the same force and effect as a handwritten signature.
+          </p>
+        </div>
+
+        <div class="signature-area">
+          <h3>Client Signature</h3>
+          <div class="sig-pad-wrap">
+            <canvas id="signature-pad"></canvas>
+            <div class="sig-actions">
+              <button type="button" class="btn btn-light" id="clear-signature">Clear Signature</button>
+              <button type="button" class="btn btn-light" id="download-signature">Download Signature</button>
+            </div>
+          </div>
+          <p class="notice">
+            Sign with your mouse, trackpad, or finger. Your signature image will be attached to the submission as encoded form data.
+          </p>
+        </div>
+
+        <div class="check-row">
+          <input type="checkbox" id="consent" name="consent" required>
+          <label for="consent" style="margin:0; font-weight:400;">
+            I have read this agreement, I consent to use an electronic signature, and I agree to the terms of this Tax Preparation Engagement Agreement.
+          </label>
+        </div>
+
+        <div class="submit-row">
+          <button type="submit" class="btn btn-dark">Submit Signed Agreement</button>
+        </div>
+
+        <p class="small">
+          After submission, the signed agreement details will be sent to Restemblance, LLC at
+          <strong>restemblance@icloud.com</strong>.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById("signature-pad");
+    const ctx = canvas.getContext("2d");
+    const clearBtn = document.getElementById("clear-signature");
+    const downloadBtn = document.getElementById("download-signature");
+    const form = document.getElementById("agreementForm");
+    const signatureInput = document.getElementById("signature_image");
+
+    let drawing = false;
+    let hasSignature = false;
+
+    function resizeCanvas() {
+      const ratio = Math.max(window.devicePixelRatio || 1, 1);
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * ratio;
+      canvas.height = rect.height * ratio;
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.scale(ratio, ratio);
+      ctx.lineWidth = 2;
+      ctx.lineCap = "round";
+      ctx.strokeStyle = "#111827";
+    }
+
+    function getPoint(event) {
+      const rect = canvas.getBoundingClientRect();
+      if (event.touches && event.touches.length > 0) {
+        return {
+          x: event.touches[0].clientX - rect.left,
+          y: event.touches[0].clientY - rect.top
+        };
+      }
+      return {
+        x: event.clientX - rect.left,
+        y: event.clientY - rect.top
+      };
+    }
+
+    function startDraw(event) {
+      drawing = true;
+      hasSignature = true;
+      const point = getPoint(event);
+      ctx.beginPath();
+      ctx.moveTo(point.x, point.y);
+      event.preventDefault();
+    }
+
+    function draw(event) {
+      if (!drawing) return;
+      const point = getPoint(event);
+      ctx.lineTo(point.x, point.y);
+      ctx.stroke();
+      event.preventDefault();
+    }
+
+    function endDraw(event) {
+      drawing = false;
+      event.preventDefault();
+    }
+
+    canvas.addEventListener("mousedown", startDraw);
+    canvas.addEventListener("mousemove", draw);
+    canvas.addEventListener("mouseup", endDraw);
+    canvas.addEventListener("mouseleave", endDraw);
+
+    canvas.addEventListener("touchstart", startDraw, { passive: false });
+    canvas.addEventListener("touchmove", draw, { passive: false });
+    canvas.addEventListener("touchend", endDraw, { passive: false });
+
+    clearBtn.addEventListener("click", () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      hasSignature = false;
+      signatureInput.value = "";
+    });
+
+    downloadBtn.addEventListener("click", () => {
+      if (!hasSignature) {
+        alert("Please sign before downloading.");
+        return;
+      }
+      const link = document.createElement("a");
+      link.href = canvas.toDataURL("image/png");
+      link.download = "client-signature.png";
+      link.click();
+    });
+
+    form.addEventListener("submit", (event) => {
+      if (!hasSignature) {
+        event.preventDefault();
+        alert("Please provide your signature before submitting.");
+        return;
+      }
+
+      signatureInput.value = canvas.toDataURL("image/png");
+    });
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    const signDate = document.getElementById("sign_date");
+    if (!signDate.value) {
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, "0");
+      const day = String(now.getDate()).padStart(2, "0");
+      signDate.value = `${year}-${month}-${day}`;
+    }
+  </script>
+</body>
+</html>
