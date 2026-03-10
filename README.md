@@ -35,6 +35,22 @@ The site includes legal compliance pages and subscription integration through Pa
 
 ---
 
+---
+## ❤️ Support Restemblance
+
+Restemblance expands access to STEM education, digital creativity,
+and computer science for underserved communities.
+
+If you'd like to support this mission:
+
+- ⭐ Sponsor on GitHub
+- ☕ Buy us a coffee
+- 💙 Donate on our website
+
+Your support helps provide tools, resources, and opportunities
+for hands-on learning in technology.
+---
+
 # Legal Pages
 
 The following legal documents are included in the site:
