@@ -94,9 +94,10 @@
 
 			}, userConfig);
 
-			// Expand "target" if it's not a jQuery object already. Removing due to security issue
+			// Expand "target" if it's not a jQuery object already.
 				//if (typeof config.target != 'jQuery')
 					//config.target = $(config.target);
+			// Expand "target" if it's not a jQuery object already. Removing due to security issue
 			//Replace
 				if(!config.target.jquery)
 					config.target = $(config.target);
