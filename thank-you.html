@@ -1,111 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Thank You | ReSTEMblance LLC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Submission Successful | ReSTEMblance LLC</title>
 
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #020617;
-      color: #E5E7EB;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #020617;
+  color: #E5E7EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
-    .card {
-      background: #020617;
-      border: 1px solid #1f2937;
-      border-radius: 16px;
-      padding: 40px 28px;
-      max-width: 520px;
-      width: 90%;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.7);
-    }
+.card {
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 18px;
+  padding: 40px;
+  max-width: 560px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+}
 
-    .logo {
-      width: 70px;
-      height: 70px;
-      margin: 0 auto 20px;
-      border-radius: 50%;
-      background: radial-gradient(circle, #0FB9B1, #08998f);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 25px rgba(15,185,177,0.5);
-    }
+.logo {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #0FB9B1, #08998f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .logo img {
-      width: 40px;
-      height: 40px;
-    }
+.logo img {
+  width: 42px;
+}
 
-    h1 {
-      margin: 0 0 12px;
-      font-size: 1.8rem;
-    }
+.checkmark {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+}
 
-    p {
-      color: #9CA3AF;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
+.checkmark circle {
+  stroke: #0FB9B1;
+  stroke-width: 3;
+  fill: none;
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  animation: stroke 0.6s forwards;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 8px;
-      background: #0FB9B1;
-      color: #020617;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.2s ease;
-    }
+.checkmark path {
+  stroke: #0FB9B1;
+  stroke-width: 3;
+  fill: none;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.4s 0.6s forwards;
+}
 
-    .btn:hover {
-      background: #08998f;
-      color: white;
-    }
+@keyframes stroke {
+  to { stroke-dashoffset: 0; }
+}
 
-    .small {
-      margin-top: 18px;
-      font-size: 0.85rem;
-      color: #6B7280;
-    }
-  </style>
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  color: #9CA3AF;
+  line-height: 1.6;
+}
+
+.summary {
+  text-align: left;
+  margin-top: 20px;
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #0FB9B1;
+  color: #020617;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #08998f;
+  color: white;
+}
+
+.small {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #6B7280;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="card">
+<div class="card">
 
-    <!-- Logo (uses your favicon) -->
-    <div class="logo">
-      <img src="favicon-256x256.png" alt="ReSTEMblance Logo">
-    </div>
-
-    <h1>Thank You</h1>
-
-    <p>
-      Your agreement has been successfully submitted to <strong>ReSTEMblance LLC</strong>.
-      We appreciate your trust and look forward to supporting your tax preparation needs.
-    </p>
-
-    <p>
-      A confirmation has been sent, and we will begin processing your information shortly.
-      If needed, we will contact you for any additional details.
-    </p>
-
+  <!-- Logo -->
+  <div class="logo">
+    <img src="favicon-256x256.png" alt="logo">
   </div>
+
+  <!-- Animated Check -->
+  <svg class="checkmark" viewBox="0 0 52 52">
+    <circle cx="26" cy="26" r="25"/>
+    <path d="M14 27l7 7 16-16"/>
+  </svg>
+
+  <h1>Submission Successful</h1>
+
+  <p>
+    Your agreement has been securely submitted to <strong>ReSTEMblance LLC</strong>.
+  </p>
+
+  <p>
+    We will review your information and follow up if needed.
+  </p>
+
+  <!-- Submission Summary -->
+  <div class="summary" id="summary">
+    <strong>Submission Details:</strong><br>
+    Loading...
+  </div>
+
+  <a href="index.html" class="btn">Return to Home</a>
+
+  <div class="small">
+    Need help? restemblance@icloud.com
+  </div>
+
+</div>
+
+<script>
+// Pull data from URL (FormSubmit sends ?name=value)
+const params = new URLSearchParams(window.location.search);
+
+const name = params.get("client_name") || "Client";
+const email = params.get("client_email") || "";
+const year = params.get("tax_year") || "";
+
+document.getElementById("summary").innerHTML = `
+<strong>Name:</strong> ${name}<br>
+<strong>Email:</strong> ${email}<br>
+<strong>Tax Year:</strong> ${year}
+`;
+
+// Optional: Auto-download (if you later generate a PDF)
+function triggerDownload() {
+  // Placeholder file
+  const link = document.createElement("a");
+  link.href = "sample-agreement.pdf"; // replace later
+  link.download = "ReSTEMblance-Agreement.pdf";
+  // link.click(); // Uncomment when you have a real file
+}
+
+// triggerDownload();
+</script>
+
 </body>
 </html>
