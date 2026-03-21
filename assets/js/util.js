@@ -94,12 +94,20 @@
 
 			}, userConfig);
 
-			// Expand "target" if it's not a jQuery object already. Removing due to security issue
-				//if (typeof config.target != 'jQuery')
-					//config.target = $(config.target);
-			//Replace
-				if(!config.target.jquery)
-					config.target = $(config.target);
+			// Expand "target" if it's not a jQuery object already, but
+			// avoid treating untrusted HTML strings as DOM (XSS risk).
+			if (!config.target || !config.target.jquery) {
+
+				// If target is a string that looks like HTML (starts with "<"),
+				// do NOT pass it to $(), as that would create DOM from it.
+				if (typeof config.target === 'string' && /^\s*</.test(config.target)) {
+					// Fallback: use the panel element itself as the target.
+					config.target = $this;
+				} else {
+					// Safe cases: selector string or DOM element.
+					config.target = $(config.target || $this);
+				}
+			}
 
 		// Panel.
 
