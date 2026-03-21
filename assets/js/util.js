@@ -100,12 +100,24 @@
 
 				// If target is a string that looks like HTML (starts with "<"),
 				// do NOT pass it to $(), as that would create DOM from it.
-				if (typeof config.target === 'string' && /^\s*</.test(config.target)) {
+				if (typeof config.target === 'string') {
+
+					if (/^\s*</.test(config.target)) {
+						// Fallback: use the panel element itself as the target.
+						config.target = $this;
+					}
+					else {
+						// Treat as a selector string.
+						config.target = $(config.target);
+					}
+				}
+				else if (config.target) {
+					// Non-string, non-jQuery truthy value (e.g. DOM element).
+					config.target = $(config.target);
+				}
+				else {
 					// Fallback: use the panel element itself as the target.
 					config.target = $this;
-				} else {
-					// Safe cases: selector string or DOM element.
-					config.target = $(config.target || $this);
 				}
 			}
 
