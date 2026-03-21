@@ -98,11 +98,13 @@
 			// avoid treating untrusted HTML strings as DOM (XSS risk).
 			if (!config.target || !config.target.jquery) {
 
-				// If target is a string that looks like HTML (starts with "<"),
-				// do NOT pass it to $(), as that would create DOM from it.
 				if (typeof config.target === 'string') {
+					// Normalize whitespace to reliably test the first character.
+					var targetStr = config.target.trim();
 
-					if (/^\s*</.test(config.target)) {
+					// If target is a string that looks like HTML (starts with "<"),
+					// do NOT pass it to $(), as that would create DOM from it.
+					if (targetStr.charAt(0) === '<') {
 						// Fallback: use the panel element itself as the target.
 						config.target = $this;
 					}
