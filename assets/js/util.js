@@ -112,8 +112,17 @@
 					}
 				}
 				else if (config.target) {
-					// Non-string, non-jQuery truthy value (e.g. DOM element).
-					config.target = $(config.target);
+					// Non-string, non-jQuery truthy value.
+					// Only wrap known-safe DOM-related objects; otherwise fall back.
+					if ((config.target.nodeType && config.target.nodeType === 1) ||
+						config.target === window ||
+						config.target === document) {
+						config.target = $(config.target);
+					}
+					else {
+						// Unexpected type: use the panel element itself as the target.
+						config.target = $this;
+					}
 				}
 				else {
 					// Fallback: use the panel element itself as the target.
