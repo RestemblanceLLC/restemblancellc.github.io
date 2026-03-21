@@ -94,16 +94,20 @@
 
 			}, userConfig);
 
-			// Expand "target" if it's not a jQuery object already, but
-			// avoid treating untrusted HTML strings as DOM (XSS risk).
+			// Normalize "target" so that untrusted strings are never treated as HTML.
+			// Accept only:
+			//   - jQuery objects (left as-is),
+			//   - selector strings (never HTML),
+			//   - DOM elements / window / document.
 			if (!config.target || !config.target.jquery) {
 
 				if (typeof config.target === 'string') {
-					// Normalize whitespace to reliably test the first character.
+
+					// Trim to reliably inspect the first character.
 					var targetStr = config.target.trim();
 
-					// If target is a string that looks like HTML (starts with "<"),
-					// do NOT pass it to $(), as that would create DOM from it.
+					// If the string looks like HTML (starts with "<"), don't pass it
+					// to $() to avoid creating DOM from untrusted HTML (XSS risk).
 					if (targetStr.charAt(0) === '<') {
 						// Fallback: use the panel element itself as the target.
 						config.target = $this;
