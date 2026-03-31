@@ -566,7 +566,7 @@
 		var key = '__prioritize';
 
 		// Expand $elements if it's not already a jQuery object.
-			if (typeof $elements != 'jQuery')
+			if (!($elements instanceof jQuery))
 				$elements = $($elements);
 
 		// Step through elements.
