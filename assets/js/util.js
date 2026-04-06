@@ -10,8 +10,8 @@ function validateConfig(target) {
 }
 
 // Usage example
-try {
-    const config = { target: validateConfig(targetString) };
-} catch (error) {
-    console.error(error.message);
-}
+// try {
+//     const config = { target: validateConfig(targetString) };
+// } catch (error) {
+//     console.error(error.message);
+// }
