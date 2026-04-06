@@ -15,9 +15,10 @@ function exampleFunction(selector) {
 }
 
 function stricterValidation(selector) {
-    // Reject HTML tags, quotes, braces, and event handler patterns
-    const regex = /[<>"{}();]+/;
-    if (regex.test(selector)) {
+    // Allow only simple, safe CSS selector characters to prevent injection
+    // This whitelist allows alphanumerics, underscores, hyphens, dots, hashes, and spaces.
+    const safeSelectorPattern = /^[A-Za-z0-9_\-#. ]+$/;
+    if (typeof selector !== 'string' || !safeSelectorPattern.test(selector)) {
         throw new Error('Invalid selector: Contains forbidden characters.');
     }
     return selector;
