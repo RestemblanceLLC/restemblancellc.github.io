@@ -124,7 +124,7 @@
 			var $this = $(this),
 				$image = $this.find('.image'), $img = $image.find('img'),
 				$link = $this.find('.link'),
-				x;
+				x, $x;
 
 			// Image.
 
