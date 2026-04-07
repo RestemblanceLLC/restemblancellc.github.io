@@ -1,6 +1,6 @@
-# Restemblance LLC Website
+# ReSTEMblance LLC Website
 
-Official website for **Restemblance LLC**, providing web development, software development, and STEM education services.
+Official website for **ReSTEMblance LLC**, providing web development, software development, and STEM education services.
 
 This project is built using the **HTML5 UP "Forty" theme** and customized for Restemblance LLC.
 
@@ -36,7 +36,7 @@ The site includes legal compliance pages and subscription integration through Pa
 ---
 
 ---
-## ❤️ Support Restemblance
+## ❤️ Support ReSTEMblance
 
 Restemblance expands access to STEM education, digital creativity,
 and computer science for underserved communities.
@@ -82,7 +82,7 @@ PayPal SDK is loaded once per page and multiple subscription buttons are rendere
 
 # AI Usage Disclosure
 
-Restemblance LLC may use AI-assisted tools for:
+ReSTEMblance LLC may use AI-assisted tools for:
 
 - Code generation
 - Development support
@@ -160,6 +160,6 @@ Website: https://restemblance.dev
 
 # License
 
-All website content, code customizations, and educational materials are the intellectual property of **Restemblance LLC** unless otherwise noted.
+All website content, code customizations, and educational materials are the intellectual property of **ReSTEMblance LLC** unless otherwise noted.
 
 Unauthorized reproduction or redistribution is prohibited.
