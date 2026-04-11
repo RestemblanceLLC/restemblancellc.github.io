@@ -157,7 +157,7 @@
 							event.preventDefault();
 
 						// Target blank?
-							if ($link.attr('target') == '_blank') {
+							if ($link.attr('target') === '_blank') {
 
 								// Open in new tab.
 									window.open(href);
