@@ -10,7 +10,7 @@ function exampleFunction(selector) {
     // Unsafe selector handling
     const safeSelector = stricterValidation(selector);
 
-    const element = $(safeSelector);
+    $(safeSelector);
     // ... further code ...
 }
 
