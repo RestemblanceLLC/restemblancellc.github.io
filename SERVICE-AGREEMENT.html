@@ -11,6 +11,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script 
+  			src="https://www.paypal.com/sdk/js?client-id=BAAeHRgY2SQqmf92d1QgACtWe0UEYujT1vPWXffQEi5XM_4kKfno9GPKc4xRxz2HHJa3l1kt37J6UU64Z4&components=hosted-buttons&enable-funding=venmo&currency=USD">
+		</script>
 		<!--<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>-->
 		<!-- PayPal SDK placeholder - replace YOUR_PAYPAL_CLIENT_ID with a real client ID before enabling in production
 		<script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
@@ -61,11 +64,12 @@
 											<p>Notice: This agreement is intended only for current clients of ReSTEMblance, LLC. If you are not an existing client, please <a href= "CONTACT.html"> contact us</a> for more information. Unless directed, process your consultation fees using the payment buttons.</p>
 										</div>
 										<div id="paypal-container-NBDAUPARS6DMG"></div>
-											<script>
-											  paypal.HostedButtons({
-											    hostedButtonId: "NBDAUPARS6DMG",
-											  }).render("#paypal-container-NBDAUPARS6DMG")
-											</script>
+											<div id="paypal-container-NBDAUPARS6DMG"></div>
+												<script>
+												  paypal.HostedButtons({
+												    hostedButtonId: "NBDAUPARS6DMG",
+												  }).render("#paypal-container-NBDAUPARS6DMG")
+												</script>
 										<!--<h2 id="content">Every Penny Counts. Your Donation Matters</h2>
 										<p></p>
 											<div class="col-6 col-12-small">
