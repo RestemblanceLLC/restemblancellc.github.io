@@ -106,7 +106,7 @@
 		});
 
 	// Fix: Enable IE-only tweaks.
-		if (browser.name == 'ie' || browser.name == 'edge')
+		if (browser.name === 'ie' || browser.name === 'edge')
 			$body.addClass('is-ie');
 
 	// Scrolly.
