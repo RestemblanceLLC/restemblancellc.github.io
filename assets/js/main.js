@@ -26,7 +26,7 @@
 	 * Applies parallax scrolling to an element's background image.
 	 * @return {jQuery} jQuery object.
 	 */
-	$.fn._parallax = (browser.name == 'ie' || browser.name == 'edge' || browser.mobile) ? function() { return $(this) } : function(intensity) {
+	$.fn._parallax = (browser.name === 'ie' || browser.name === 'edge' || browser.mobile) ? function() { return $(this) } : function(intensity) {
 
 		var	$window = $(window),
 			$this = $(this);
@@ -91,6 +91,12 @@
 
 	};
 
+	// Public alias for the parallax plugin to avoid suggesting privacy.
+	// Keeps the original `_parallax` name for backwards compatibility.
+	$.fn.parallax = function(intensity) {
+		return $.fn._parallax.call(this, intensity);
+	};
+
 	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
@@ -106,7 +112,7 @@
 		});
 
 	// Fix: Enable IE-only tweaks.
-		if (browser.name == 'ie' || browser.name == 'edge')
+		if (browser.name === 'ie' || browser.name === 'edge')
 			$body.addClass('is-ie');
 
 	// Scrolly.
@@ -157,7 +163,7 @@
 							event.preventDefault();
 
 						// Target blank?
-							if ($link.attr('target') == '_blank') {
+							if ($link.attr('target') === '_blank') {
 
 								// Open in new tab.
 									window.open(href);
@@ -327,7 +333,7 @@
 			.on('keydown', function(event) {
 
 				// Hide on escape.
-					if (event.keyCode == 27)
+					if (event.key === 'Escape' || event.keyCode === 27)
 						$menu._hide();
 
 			});
