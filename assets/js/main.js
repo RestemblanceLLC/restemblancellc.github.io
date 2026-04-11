@@ -91,6 +91,12 @@
 
 	};
 
+	// Public alias for the parallax plugin to avoid suggesting privacy.
+	// Keeps the original `_parallax` name for backwards compatibility.
+	$.fn.parallax = function(intensity) {
+		return $.fn._parallax.call(this, intensity);
+	};
+
 	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
