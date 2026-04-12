@@ -31,12 +31,12 @@
 		var	$window = $(window),
 			$this = $(this);
 
-		if (this.length == 0 || intensity === 0)
+		if (this.length === 0 || intensity === 0)
 			return $this;
 
 		if (this.length > 1) {
 
-			for (var i=0; i < this.length; i++)
+			for (let i=0; i < this.length; i++)
 				$(this[i])._parallax(intensity);
 
 			return $this;
@@ -333,7 +333,7 @@
 			.on('keydown', function(event) {
 
 				// Hide on escape.
-					if (event.key === 'Escape' || event.keyCode === 27)
+					if (event.key === 'Escape')
 						$menu._hide();
 
 			});
