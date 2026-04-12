@@ -36,7 +36,7 @@
 
 		if (this.length > 1) {
 
-			for (var i=0; i < this.length; i++)
+			for (let i=0; i < this.length; i++)
 				$(this[i])._parallax(intensity);
 
 			return $this;
