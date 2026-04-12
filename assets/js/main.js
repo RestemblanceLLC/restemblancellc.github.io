@@ -31,7 +31,7 @@
 		var	$window = $(window),
 			$this = $(this);
 
-		if (this.length == 0 || intensity === 0)
+		if (this.length === 0 || intensity === 0)
 			return $this;
 
 		if (this.length > 1) {
