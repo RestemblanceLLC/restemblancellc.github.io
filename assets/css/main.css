@@ -3394,6 +3394,49 @@ td {
 
 		}
 
+/* About ReSTEMblance */
+	/* Ensure left alignment */
+	.restemblance-about .content {
+		text-align: left;
+	}
+	
+	/* Improve spacing */
+	.restemblance-about .inner {
+		max-width: 650px;
+	}
+	
+	/* Image styling */
+	.restemblance-about .image img {
+		object-fit: cover;
+		height: 100%;
+	}
+	
+	/* Add breathing room */
+	.restemblance-about section {
+		align-items: center;
+		gap: 3rem;
+	}
+	
+	/* Optional: soften the look */
+	.restemblance-about .content {
+		padding: 2rem 3rem;
+	}
+
+/* Responsive (VERY important) */
+	@media screen and (max-width: 980px) {
+		.restemblance-about section {
+			flex-direction: column;
+		}
+	
+		.restemblance-about .image {
+			width: 100%;
+		}
+	
+		.restemblance-about .content {
+			padding: 2rem;
+		}
+	}
+
 /* Banner */
 
 	#banner {
