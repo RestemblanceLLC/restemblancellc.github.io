@@ -2941,6 +2941,39 @@ td {
 		}
 
 /* Spotlights */
+    /* Make each spotlight row a true flex container */
+.spotlights section {
+	display: flex;
+	align-items: stretch; /* forces equal height */
+}
+
+/* Make BOTH sides take equal space */
+	
+	.spotlights section > .content,
+	.spotlights section > .image {
+		width: 50%;
+	}
+	
+	/* Ensure inner content fills full height */
+	.spotlights .content {
+		display: flex;
+		align-items: center; /* vertically center text */
+	}
+	
+	.spotlights .content .inner {
+		width: 100%;
+	}
+	
+	/* Force image to fill its side perfectly */
+	.spotlights .image {
+		display: flex;
+	}
+	
+	.spotlights .image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover; /* fills space cleanly */
+	}
 
 	.spotlights section {
 	align-items: center; /* THIS centers image with text */
@@ -3094,6 +3127,16 @@ td {
 				padding: 3em 1.5em 1em 1.5em ;
 			}
 
+		}
+		@media screen and (max-width: 980px) {
+			.spotlights section {
+				flex-direction: column;
+			}
+		
+			.spotlights section > .content,
+			.spotlights section > .image {
+				width: 100%;
+			}
 		}
 
 /* Header */
