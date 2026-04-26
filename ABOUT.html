@@ -131,21 +131,20 @@
 						<div class="inner">
 							<section>
 								<form method="post" action="https://formspree.io/f/xvzaavne">
-										<div class="field half">
 											<label for="name">Name</label>
 											<input type="text" name="name" id="name" required aria-required="true" aria-describedby="name-error" />
 											<span id="name-error" class="error-message" style="display:none;" aria-live="assertive">Please enter your name.</span>
-										</div>
+											<span id="name-error" hidden aria-live="polite">Please enter your name.</span>
 										<div class="field half">
 											<label for="email">Email</label>
 											<input type="email" name="email" id="email" required aria-required="true" aria-describedby="email-error" />
 											<span id="email-error" class="error-message" style="display:none;" aria-live="assertive">Please enter a valid email address.</span>
-										</div>
+											<span id="email-error" hidden aria-live="polite">Please enter a valid email address.</span>
 										<div class="field">
 											<label for="message">Message</label>
 											<textarea name="message" id="message" rows="6" required aria-required="true" aria-describedby="message-error"></textarea>
 											<span id="message-error" class="error-message" style="display:none;" aria-live="assertive">Please enter a message.</span>
-										</div>
+											<span id="message-error" hidden aria-live="polite">Please enter a message.</span>
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" class="primary" /></li>
 										<li><input type="reset" value="Clear" /></li>
