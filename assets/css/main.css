@@ -2942,6 +2942,22 @@ td {
 
 /* Spotlights */
 
+	.spotlights section {
+	align-items: center; /* THIS centers image with text */
+	}
+
+	.spotlights .image {
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+	
+	.spotlights .image img {
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+
 	.spotlights {
 		border-top: 0 !important;
 	}
