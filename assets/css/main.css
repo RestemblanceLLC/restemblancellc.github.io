@@ -2941,19 +2941,6 @@ td {
 		}
 
 /* Spotlights */
-    /* Make each spotlight row a true flex container */
-.spotlights section {
-	display: flex;
-	align-items: stretch; /* forces equal height */
-}
-
-/* Make BOTH sides take equal space */
-	
-	.spotlights section > .content,
-	.spotlights section > .image {
-		width: 50%;
-	}
-	
 	/* Ensure inner content fills full height */
 	.spotlights .content {
 		display: flex;
@@ -2975,20 +2962,10 @@ td {
 		object-fit: cover; /* fills space cleanly */
 	}
 
-	.spotlights section {
-	align-items: center; /* THIS centers image with text */
-	}
-
-	.spotlights .image {
+	.spotlights > section > .image {
 		height: 100%;
 		display: flex;
 		align-items: center;
-	}
-	
-	.spotlights .image img {
-		object-fit: cover;
-		height: 100%;
-		width: 100%;
 	}
 
 	.spotlights {
