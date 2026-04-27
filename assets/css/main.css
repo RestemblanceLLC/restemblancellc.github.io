@@ -2941,12 +2941,6 @@ td {
 		}
 
 /* Spotlights */
-    /* Make each spotlight row a true flex container */
-.spotlights section {
-	display: flex;
-	align-items: stretch; /* forces equal height */
-}
-
 	/* Ensure inner content fills full height */
 	.spotlights .content {
 		display: flex;
