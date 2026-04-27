@@ -2979,7 +2979,7 @@ td {
 	align-items: center; /* THIS centers image with text */
 	}
 
-	.spotlights .image {
+	.spotlights > section > .image {
 		height: 100%;
 		display: flex;
 		align-items: center;
