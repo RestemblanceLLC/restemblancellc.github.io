@@ -2975,10 +2975,6 @@ td {
 		object-fit: cover; /* fills space cleanly */
 	}
 
-	.spotlights section {
-	align-items: center; /* THIS centers image with text */
-	}
-
 	.spotlights > section > .image {
 		height: 100%;
 		display: flex;
