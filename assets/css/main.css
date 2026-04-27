@@ -2947,13 +2947,6 @@ td {
 	align-items: stretch; /* forces equal height */
 }
 
-/* Make BOTH sides take equal space */
-	
-	.spotlights section > .content,
-	.spotlights section > .image {
-		width: 50%;
-	}
-	
 	/* Ensure inner content fills full height */
 	.spotlights .content {
 		display: flex;
