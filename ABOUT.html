@@ -42,7 +42,7 @@ title: "About ReSTEMblance"
 				<!-- Header -->
 				<!-- Note: The "styleN" class below should match that of the banner element. -->
 					<header id="header" class="alt style2">
-						<a href="index.html" class="logo"><strong>DEVHOUSE+STEM EDUCATION</strong> <span>by RESTEMBLANCE, LLC.</span></a>
+						<a href="index.html" class="logo"><strong>DEVHOUSE+STEM EDUCATION</strong> <span>by ReSTEMblance, LLC.</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -68,7 +68,7 @@ title: "About ReSTEMblance"
 					<section id="banner" class="style2">
 						<div class="inner">
 							<span class="image">
-								<img src="images/pic01vrboy1.jpg" alt="Student using virtual reality headset for STEM learning" />
+								<img src="images/pic01vrboy1.jpg" alt="Boy using virtual reality headset for STEM learning" />
 							</span>
 							<header class="major">
 								<h1>ABOUT</h1>
@@ -84,27 +84,33 @@ title: "About ReSTEMblance"
 				<!-- Main -->
 					<div id="main">
 
-						<!-- One -->
-							<section id="one" >
-								<a href="CONTACT.html" class="image">
-									<img src="images/drchrevsmall.png" alt="Dr. Cristal Harris, Founder of ReSTEMblance, LLC." data-position="top center" />
-									</a>
-									<div class="content">
-									<div class="inner">
-										<header class="major">
-											<h3>Who We Are</h3>
-										</header>
-									<p>ReSTEMblance is a full-service DevHouse dedicated to building and maintaining powerful, reliable, and scalable technology solutions. Our team blends strategy, design, and evaluation to help organizations strengthen their digital presence. From development to long-term maintenance, we ensure every website, activity or platform we create continues to perform and grow.</p>
-									<p>Dr. Cristal Harris, Ed.D, is the owner and developer of ReSTEMblance, LLC. Dr. Harris is an educator and STEM innovator specializing in computational thinking and computer science education. With expertise in curriculum design, equity in STEM, and culturally responsive teaching, she creates learning experiences that help students build confidence in problem-solving, coding, and digital creativity. Dr. Harris is committed to expanding access to high-quality computer science education—especially for underserved communities—and empowering students to see themselves as future engineers, creators, and leaders in technology.</p>
-									<p>What we do as a DevHouse is establish a digital handprint for businesses and organizations through technology solutions and web development, that support our cause for the sustainable ways to maximize STEM learning and positively influence the next generation of digital leaders.</p>
+						<!--New One -->
+						<section id="one" class="spotlights restemblance-about">
+						<section>
+							<div class="content">
+								<div class="inner">
+									<header class="major">
+										<h2>Who We Are</h2>
+									</header>
+									<p>ReSTEMblance is a full-service DevHouse dedicated to building and maintaining powerful, reliable, and scalable technology solutions. Our team blends strategy, design, and evaluation to help organizations strengthen their digital presence.</p>
+									
+									<p>Dr. Cristal Harris, Ed.D, is the owner and developer of ReSTEMblance, LLC. She is an educator and STEM innovator specializing in computational thinking and computer science education, with a focus on equity and culturally responsive teaching.</p>
+									
+									<p>We establish a digital handprint for organizations through technology solutions that support sustainable STEM learning and empower the next generation of digital leaders.</p>
 								</div>
-							</section>
+							</div>
+					
+							<a href="#" class="image">
+								<img src="images/drchrevsmaller.jpg" alt="Dr. Cristal Harris" />
+							</a>
+						</section>
+					</section>
 								
 
 						<!-- Two -->
 							<section id="two" class="spotlights">
 								<section>
-									<a href="generic.html" class="image">
+									<a href="CONTACT.html" class="image">
 										<img src="images/pic07helloworld.jpg" alt="Lego image with code" data-position="center center" />
 									</a>
 									<div class="content">
@@ -112,7 +118,7 @@ title: "About ReSTEMblance"
 											<header class="major">
 												<h3>How we help</h3>
 											</header>
-											<p>We do the work for you to design your website. We cater to your organization's needs by building a website using leading technology that will expand your organization's vision. We offer web maintenance, monthly updates, web hosting and develop your website that is secure and hacker-free. Expanding your organization's vision through website development requires a digital and financial literacy component. ReSTEMblance also offers tax preparation for individuals and small businesses. Tax preparation services can serve as a point of entry into the technology programs ReSTEMblance supports. By helping individuals and families accurately file their taxes and claim the refunds and credits they have earned, we support financial stability while also promoting digital and financial literacy. Many people first interact with online systems and digital tools during tax season, and our guidance helps build confidence navigating these technologies. </p>
+											<p>We do the work for you to design your website. We offer web maintenance, monthly updates, web hosting and develop your website that is secure and hacker-free. Expanding your organization's vision through website development requires a digital and financial literacy component. ReSTEMblance also offers tax preparation for individuals and small businesses. Tax preparation services can serve as a point of entry into the technology programs ReSTEMblance supports. By helping individuals and families accurately file their taxes and claim the refunds and credits they have earned, we support financial stability while also promoting digital and financial literacy. Many people first interact with online systems and digital tools during tax season, and our guidance helps build confidence navigating these technologies. </p>
 										</div>
 									</div>
 								</section>
@@ -133,7 +139,6 @@ title: "About ReSTEMblance"
 									</div>
 								</section>
 							</section>
-
 					</div>
 
 				<!-- Contact -->
@@ -141,20 +146,20 @@ title: "About ReSTEMblance"
 						<div class="inner">
 							<section>
 								<form method="post" action="https://formspree.io/f/xvzaavne">
-									<div class="fields">
-										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" required aria-required="true" />
-										</div>
+											<input type="text" name="name" id="name" required aria-required="true" aria-describedby="name-error" />
+											<span id="name-error" class="error-message" style="display:none;" aria-live="assertive">Please enter your name.</span>
+											<span id="name-error" hidden aria-live="polite">Please enter your name.</span>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="email" name="email" id="email" required aria-required="true" />
-										</div>
+											<input type="email" name="email" id="email" required aria-required="true" aria-describedby="email-error" />
+											<span id="email-error" class="error-message" style="display:none;" aria-live="assertive">Please enter a valid email address.</span>
+											<span id="email-error" hidden aria-live="polite">Please enter a valid email address.</span>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6" required aria-required="true"></textarea>
-										</div>
-									</div>
+											<textarea name="message" id="message" rows="6" required aria-required="true" aria-describedby="message-error"></textarea>
+											<span id="message-error" class="error-message" style="display:none;" aria-live="assertive">Please enter a message.</span>
+											<span id="message-error" hidden aria-live="polite">Please enter a message.</span>
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" class="primary" /></li>
 										<li><input type="reset" value="Clear" /></li>
@@ -226,39 +231,3 @@ title: "About ReSTEMblance"
 	</body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
