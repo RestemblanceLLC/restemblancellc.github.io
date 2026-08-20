@@ -74,39 +74,3 @@
 	@import 'layout/wrapper';
 	@import 'layout/menu';
 
-/* =========================================================
-   ReSTEMblance About Page — Lavender + Teal Theme
-   ========================================================= */
-
-.about-page {
-  --restemblance-lavender: #B8A9D9;
-  --restemblance-light-lavender: #E9E3F5;
-  --restemblance-teal: #2A9D8F;
-  --restemblance-dark-teal: #1F6F68;
-}
-
-/* About page links */
-.about-page a {
-  color: var(--restemblance-teal);
-}
-
-.about-page a:hover {
-  color: var(--restemblance-dark-teal);
-}
-
-/* About page headings */
-.about-page h1,
-.about-page h2,
-.about-page h3 {
-  color: var(--restemblance-dark-teal);
-}
-
-/* About page content */
-.about-page .page__content {
-  background-color: var(--restemblance-light-lavender);
-}
-
-/* About page footer */
-.about-page .page__footer {
-  background-color: var(--restemblance-lavender);
-}
