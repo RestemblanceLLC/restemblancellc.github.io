@@ -4057,5 +4057,15 @@ td {
 			opacity: 1;
 			visibility: visible;
 		}
+/* =========================================================
+   ReSTEMblance ABOUT Page
+   Lavender + Teal Theme
+   ========================================================= */
 
+body.about-page {
+	--restemblance-lavender: #B8A9D9;
+	--restemblance-light-lavender: #E9E3F5;
+	--restemblance-teal: #0FB9B1;
+	--restemblance-dark-teal: #087F7A;
+}
 
