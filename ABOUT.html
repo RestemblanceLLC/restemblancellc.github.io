@@ -31,9 +31,17 @@
 				margin: 0 0 2em 2em;
 			}
 
-			/* Add left margin to content in section one */
+			/* Center-align content in section one with the image */
 			#one .content {
 				margin-left: 2em;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			/* Center-align the heading in section one */
+			#one .inner header {
+				text-align: center;
 			}
 
 			/* Clear float after section one to prevent overlap with section two */
@@ -41,6 +49,18 @@
 				content: "";
 				display: table;
 				clear: both;
+			}
+
+			/* Center align image in first spotlight (How we help) */
+			#two .spotlights > section:first-child .image {
+				float: none;
+				margin: 0 auto 2em auto;
+				text-align: center;
+			}
+
+			/* Center align image wrapper for first spotlight */
+			#two .spotlights > section:first-child .image {
+				display: block;
 			}
 		</style>
 
