@@ -51,11 +51,12 @@
 				text-align: center;
 			}
 
-			/* How We Help Section - Spotlight with centered image */
+			/* How We Help Section - Image on RIGHT */
 			#two.spotlights > section:first-child {
 				display: flex;
 				align-items: center;
 				gap: 2em;
+				flex-direction: row-reverse;
 			}
 
 			/* Center the image in How We Help */
@@ -74,6 +75,29 @@
 				justify-content: center;
 			}
 
+			/* How We Expand Section - Image on LEFT */
+			#two.spotlights > section:last-child {
+				display: flex;
+				align-items: center;
+				gap: 2em;
+			}
+
+			/* Center the image in How We Expand */
+			#two.spotlights > section:last-child .image {
+				flex: 0 0 auto;
+				float: none;
+				margin: 0;
+				text-align: center;
+			}
+
+			/* Content in How We Expand section */
+			#two.spotlights > section:last-child .content {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
 			/* Responsive adjustments */
 			@media screen and (max-width: 736px) {
 				#one {
@@ -84,11 +108,13 @@
 					width: 100%;
 				}
 
-				#two.spotlights > section:first-child {
+				#two.spotlights > section:first-child,
+				#two.spotlights > section:last-child {
 					flex-direction: column;
 				}
 
-				#two.spotlights > section:first-child .image {
+				#two.spotlights > section:first-child .image,
+				#two.spotlights > section:last-child .image {
 					width: 100%;
 				}
 			}
